@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            无限滚动
+        </title>
+        <style>
+            *{
+                padding: 0;margin: 0;
+            }
+            .banner{
+                width: 100%;
+                height: 45px;
+                background-color:white;
+                position: fixed;
+                top: 0px;
+                border-bottom: 1px solid #efefef;
+                box-sizing: border-box;ssssssssssssssss
+                z-index: 1;
+            }
+            /* body{
+                background-color: black;
+            } */
+            .banner ul li{
+                line-height: 45px;
+                list-style: none;
+                position: absolute;
+            }
+            .banner ul li:nth-child(1){
+                font-family: "微软雅黑";
+                font-size: 30px;
+                font-weight:lighter;
+                color: #eb6f5a;
+                left: 15%;
+            }
+            .banner ul li:nth-child(2){
+                width: 120px;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                /* background-color: rebeccapurple; */
+                font-size: 20px;
+                left: 25%;
+            }
+            .banner ul li:nth-child(3){
+                width: 120px;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                /* background-color: rebeccapurple; */
+                font-size: 20px;
+                left: 25%;
+                margin-left: 120px;
+            }
+            .banner ul li:nth-child(4){
+                width: 120px;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                /* background-color: rebeccapurple; */
+                font-size: 20px;
+                left: 25%;
+                margin-left: 240px;
+            }
+            .banner ul li:nth-child(5){
+                top: -2px;
+                line-height: 45px;
+                left: 55%;
+            }
+            .banner ul li:nth-child(5) input{
+                border-radius: 14px;
+                height: 28px;
+                width: 300px;
+                background-color:#eeeeee;
+                border: 0px solid #000;
+                color: rgb(218, 216, 216);
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 100;
+            }
+            .banner ul li:nth-child(6){
+                top: 3px;
+                line-height: 45px;
+                left: 80%;
+            }
+            .banner ul li:nth-child(6) img{
+                border-radius: 50%;
+            }
+            .banner ul li:nth-child(7){
+                line-height: 45px;
+                left: 85%;
+            }
+            .banner ul li:nth-child(7) input{
+                height: 30px;
+                width: 55px;
+                border-radius: 8px;
+                background-color: #eeeeee;
+                border: 0;
+                font-family: "微软雅黑";
+            }
+            .xunrou1{
+                position: fixed;
+                left: 3%;
+                top: 35%;
+            }
+            .xunrou2{
+                position: fixed;
+                right: 3%;
+                top: 35%;
+            }
+            .length{
+                position: absolute;
+                left: 50%;
+                margin-left: 15px;
+                top: 200px;
+                width: 30px;
+                height: 1900px;
+                /* background-color: rebeccapurple; */
+            }
+            .top{
+                line-height: 50px;
+                width: 50px;
+                height: 50px;
+                position: fixed;
+                right: 5%;
+                bottom: 14%;
+                border-radius: 50%;
+                background-color: #eeeeee;
+                text-align: center;
+            }
+            .top a{
+                font-size: 15px;
+                text-decoration: none;
+                font-weight: bold;
+                color: gray;
+            }
+             .tit{
+            position: absolute;
+            width: 300px;
+            left: 50%;
+            top: 100px;
+            margin-left: -150px;
+            font-family: "微软雅黑";
+            font-size: 30px;
+            font-weight: bold;
+            /* color: white; */
+            }
+            .container{
+                width: 900px;
+                border: 1px solid #000;
+                position: absolute;
+                left: 50%;
+                top: 30%;
+                margin-left: -450px;
+                height: 200px;
+                overflow: hidden;
+                background-color: black;
+            }
+            .box{
+                
+                width: 2700px;
+                height: 200px;
+               
+                list-style: none;
+                /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+                animation: sport 10s linear 0s infinite ;
+            }
+            @keyframes sport{
+                from{
+                    margin-left:0px;
+                }
+                to{
+                    margin-left: -1800px;
+                }
+            }
+            .box li{
+                float: left;
+
+            }
+            .box:hover{
+                animation-play-state:paused;
+                /* opacity: 0.7; */
+            }
+
+            /* 如果把这个注释掉，再把上面的opacity打开，最下面那个opacity：1；会失效*/
+            .box:hover li{
+                opacity: 0.5;
+            }
+            
+            .box li:hover{
+                opacity: 1;
+            }
+           
+            .enter{
+            width: 80px;
+            height: 50px;
+            /* background-color: rebeccapurple; */
+            margin: 0 auto;
+            margin-top: 600px;
+            }
+
+            .enter input{
+                width: 80px;
+                height: 50px;
+                border-radius: 10px;
+                background-color: #b3b3b3;
+                border: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="banner">
+            <ul>
+                <li>哲♂学</li>
+                <li>Firestation</li>
+                <li>Gym</li>
+                <li>Dungeon</li>
+                <li>
+                    <form>
+                        <input type="text" value=" Your Fantasy"/>
+                    </form>
+                </li>
+                <li><img src="images/timg.jpg" /></li>
+                <li><input type="submit" value="进入" /> </li>
+            </ul>
+
+            
+        </div>
+        <div class="xunrou1">
+                <img src="images/d19146166d224f4a4af91a8d05f790529922d1b2.gif" />
+        </div>
+        <div class="xunrou2">
+                <img src="images/d19146166d224f4a4af91a8d05f790529922d1b2.gif" />
+        </div>
+        <div class="length">
+            
+        </div>
+        <div class="top">
+            <a href="#" >TOP</a>
+        </div>
+        <div class="tit">
+            <p>请选择你的男朋♂友</p>
+        </div>
+        <div class="container">
+            <ul class="box">
+                <li><img src="images/milos.jpg" /></li>
+                <li><img src="images/monan.jpg" /></li>
+                <li><img src="images/muji.jpg" /></li>
+                <li><img src="images/peace.jpg" /></li>
+                <li><img src="images/tianyan.jpg" /></li>
+                <li><img src="images/van.jpg" /></li>
+                <li><img src="images/milos.jpg" /></li>
+                <li><img src="images/monan.jpg" /></li>
+                <li><img src="images/muji.jpg" /></li>
+            </ul>
+        </div>
+        <div class="enter">
+            <form>
+                <input type="submit" name="" value="进♂入游戏" />
+            </form>
+        </div>
+    </body>
+</html>
